@@ -1,3 +1,5 @@
+// common css start
+
 (function($) {
     "use strict";
     $(document).ready(function () {
@@ -24,6 +26,10 @@ $('.top-slide').on('click', function() {
 
 new WOW().init();
 
+$('.loader-wrapper').fadeOut('slow', function() {
+    $(this).remove();
+});
+
 $(window).scroll(function() {
      var scroll = $(window).scrollTop();
      if (scroll >= 60) {
@@ -33,13 +39,26 @@ $(window).scroll(function() {
      }
  });
 
+// common css end
 
-$('.products').owlCarousel({
+ $('.slider').owlCarousel({
+    items:1,
+    loop:true,
+    autoplay: true,
+    nav:true,
+    navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    dots: false,
+    margin: 0,
+  
+})
+
+$('.projects').owlCarousel({
     loop:true,
     // autoplay: true,
     nav:false,
     dots: false,
-    margin: 20,
+    // margin: 20,
+    center: true,
     responsive:{
         0:{
             items:1
@@ -49,9 +68,20 @@ $('.products').owlCarousel({
             margin: 15
         },
         1000:{
-            items:3
+            items:3,
+            margin: 30
         }
     }
+})
+$('.testimonials').owlCarousel({
+    items:1,
+    loop:true,
+    // autoplay: true,
+    nav:true,
+    navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+    dots: false,
+    margin: 0,
+  
 })
 $('.blog').owlCarousel({
     loop:true,
@@ -72,16 +102,6 @@ $('.blog').owlCarousel({
         }
     }
 })
-$('.testimonial').owlCarousel({
-    items:1,
-    loop:true,
-    // autoplay: true,
-    nav:false,
-    dots: false,
-    margin: 0,
-  
-})
 
-$('.loader-wrapper').fadeOut('slow', function() {
-    $(this).remove();
-});
+
+

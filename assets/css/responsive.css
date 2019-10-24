@@ -1,9 +1,12 @@
+@media (max-width: 991px) {
+  .agency-section p {
+    width: 100%; } }
 @media (max-width: 767px) {
-  .food-section {
+  .agency-section {
     height: auto; }
-    .food-section .center-content {
+    .agency-section .center-content {
       height: auto; }
-    .food-section .slider-sec {
+    .agency-section .slider-sec {
       margin-top: 50px;
       padding: 70px 0; }
 
@@ -25,5 +28,3 @@
   .navbar-collapse {
     background: #333333;
     border: 1px solid rgba(255, 194, 87, 0.3); } }
-
-/*# sourceMappingURL=responsive.css.map */
